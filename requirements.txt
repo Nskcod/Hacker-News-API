@@ -1,0 +1,5 @@
+requests==2.25.1
+FastAPI==0.63.0
+Uvicorn==0.13.4
+Docker==5.0.0
+jinja2==3.0.3

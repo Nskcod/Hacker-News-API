@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Hacker News Stories</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            justify-content: center; 
+        }
+
+        h1 { 
+            font-size: 24px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            text-align: center; 
+            padding: 20px; 
+        }
+
+        .news-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            }
+
+        .news-item { 
+            width: calc(33.333% - 20px); 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
+        }
+
+        .news-title { 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+
+        .news-url { 
+            font-size: 14px; 
+            color: #0066cc; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Hacker News Stories</h1>
+    <div class="news-container">
+        {% for item in news_items %}
+            <div class="news-item">
+                <div class="news-title">{{ item['title'] }}</div>
+                <div class="news-url"><a href="{{ item['url'] }}" target="_blank">{{ item['url'] }}</a></div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
